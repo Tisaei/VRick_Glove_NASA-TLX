@@ -35,6 +35,11 @@ left[5]   = "低い";
 right[5]  = "高い";
 def[5]    = "作業中に、不安感、落胆、いらいら、ストレス、悩みをどの程度感じましたか。あるいは逆に、安心感、満足感、充足感、楽しさ、リラックスをどの程度感じましたか。";
 
+window.addEventListener('load', OnLoad);
+function OnLoad() {
+	alert("ロードしました。");
+}
+
 // Pairs of factors in order in the original instructions, numbers
 // refer to the index in the scale, left, right, def arrays.
 let pair = new Array();
@@ -63,7 +68,7 @@ let results_overall;
 let pair_num = 0;
 
 function clicked1() {
-	alert("次の15の画面のそれぞれで、タスクの作業負荷へのより重要な要因を表す要素をクリックしてください。");
+	alert("次に15の質問をします。それぞれで、どちらがより作業負荷に直結した要因か選んでください。");
 	results_rating[0] = Math.floor(document.getElementById("mental").value / 5) * 5;
 	results_rating[1] = Math.floor(document.getElementById("physical").value / 5) * 5;
 	results_rating[2] = Math.floor(document.getElementById("temporal").value / 5) * 5;
